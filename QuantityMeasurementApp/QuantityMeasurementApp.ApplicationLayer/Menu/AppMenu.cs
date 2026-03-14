@@ -71,6 +71,13 @@ namespace QuantityMeasurementApp.ApplicationLayer.Menu
         private void ShowQuantityMenu<T>(string title) where T : struct, Enum
         {
             var menu = _serviceProvider.GetService(typeof(GenericQuantityMenu<T>)) as GenericQuantityMenu<T>;
+            if(menu is null)
+            {
+                Console.WriteLine("Unable to load menu");
+                Console.WriteLine("\nPress any Key to Continue");
+                Console.ReadKey();
+                return;
+            }
             menu?.Show(title);
         }
     }

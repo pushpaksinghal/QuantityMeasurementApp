@@ -13,7 +13,7 @@ namespace QuantityMeasurementApp.BusinessLayer.EnumAdaptors
         public static LengthUnitAdapter From(LengthUnit unit) => new(unit);
 
         public string UnitName => unit.ToString();
-
+            
         private double FactorToInches => unit switch
         {
             LengthUnit.FEET => 12.0,

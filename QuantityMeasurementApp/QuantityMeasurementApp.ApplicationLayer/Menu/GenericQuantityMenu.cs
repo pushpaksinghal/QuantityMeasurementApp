@@ -1,34 +1,28 @@
-﻿
-using QuantityMeasurementApp.BusinessLayer.Services;
-using QuantityMeasurementApp.ModelLayer.Entity;
+﻿using QuantityMeasurementApp.BusinessLayer.Services;
+using QuantityMeasurementApp.ModelLayer.DTOs;
 using System;
 
 namespace QuantityMeasurementApp.ApplicationLayer.Menu
 {
     public class GenericQuantityMenu<T> where T : struct, Enum
     {
-        private readonly IQuantityConversionService _conversionService;
-        private readonly IQuantityArithmeticService _arithmeticService;
+        private readonly QuantityApplicationService _applicationService;
         private readonly QuantityEqualityComparer<T> _equalityComparer;
-        private readonly QuantityValidationService _validator;
         private readonly string _unitTypeName;
 
         public GenericQuantityMenu(
-            IQuantityConversionService conversionService,
-            IQuantityArithmeticService arithmeticService,
-            QuantityEqualityComparer<T> equalityComparer,
-            QuantityValidationService validator)
+            QuantityApplicationService applicationService,
+            QuantityEqualityComparer<T> equalityComparer)
         {
-            _conversionService = conversionService;
-            _arithmeticService = arithmeticService;
+            _applicationService = applicationService;
             _equalityComparer = equalityComparer;
-            _validator = validator;
             _unitTypeName = typeof(T).Name.Replace("Unit", "");
         }
 
         public void Show(string title)
         {
             bool flag = true;
+
             while (flag)
             {
                 Console.Clear();
@@ -102,107 +96,132 @@ namespace QuantityMeasurementApp.ApplicationLayer.Menu
             return true;
         }
 
-        private Quantity<T> ReadQuantity(string prompt)
+        private QuantityDTO ReadQuantityDto(string prompt)
         {
             Console.Write($"Enter {prompt} value: ");
             if (!double.TryParse(Console.ReadLine(), out double value))
-                throw new ArgumentException("Invalid value format");
+                throw new ArgumentException("Invalid value format.");
 
             Console.Write($"Enter {prompt} unit: ");
-            string unitText = Console.ReadLine()!;
+            string unitText = Console.ReadLine() ?? string.Empty;
 
-            if (!TryParseUnit(unitText, out T unit))
+            if (!TryParseUnit(unitText))
             {
                 PrintAllowedUnits();
-                throw new ArgumentException("Invalid unit");
+                throw new ArgumentException("Invalid unit.");
             }
 
-            return new Quantity<T>(value, unit);
+            return new QuantityDTO
+            {
+                Value = value,
+                Unit = unitText
+            };
         }
 
         private void CheckEquality()
         {
             Console.WriteLine("\n--- Equality Check ---");
-            var q1 = ReadQuantity("first");
-            var q2 = ReadQuantity("second");
 
-            bool areEqual = _equalityComparer.Equals(q1, q2);
-            Console.WriteLine($"\nResult: {q1.Value} {q1.Unit} {(areEqual ? "==" : "!=")} {q2.Value} {q2.Unit}");
+            var request = new BinaryQuantityRequestDto
+            {
+                FirstQuantity = ReadQuantityDto("first"),
+                SecondQuantity = ReadQuantityDto("second")
+            };
+
+            var result = _applicationService.CheckEquality<T>(request, _equalityComparer);
+            Console.WriteLine($"\nResult: {result.Message}");
         }
 
         private void ConvertUnit()
         {
             Console.WriteLine("\n--- Unit Conversion ---");
-            var quantity = ReadQuantity("source");
+
+            var source = ReadQuantityDto("source");
 
             Console.Write("Enter target unit: ");
-            string targetText = Console.ReadLine()!;
+            string targetText = Console.ReadLine() ?? string.Empty;
 
-            if (!TryParseUnit(targetText, out T target))
+            if (!TryParseUnit(targetText))
             {
                 PrintAllowedUnits();
                 return;
             }
 
-            var result = _conversionService.ConvertTo(quantity, target);
-            Console.WriteLine($"\nResult: {quantity.Value} {quantity.Unit} = {result.Value} {result.Unit}");
+            var request = new ConversionRequestDto
+            {
+                SourceQuantity = source,
+                TargetUnit = targetText
+            };
+
+            var result = _applicationService.ConvertUnit<T>(request);
+            Console.WriteLine($"\nResult: {result.Message}");
         }
 
         private void AddUnits(bool useTargetUnit)
         {
-            Console.WriteLine(useTargetUnit ? "\n--- Addition to Specific Unit ---" : "\n--- Addition ---");
+            Console.WriteLine(useTargetUnit
+                ? "\n--- Addition to Specific Unit ---"
+                : "\n--- Addition ---");
 
-            var q1 = ReadQuantity("first");
-            var q2 = ReadQuantity("second");
-
-            Quantity<T> result;
+            var request = new BinaryQuantityRequestDto
+            {
+                FirstQuantity = ReadQuantityDto("first"),
+                SecondQuantity = ReadQuantityDto("second")
+            };
 
             if (useTargetUnit)
             {
                 Console.Write("Enter target unit: ");
-                string targetText = Console.ReadLine()!;
+                string targetText = Console.ReadLine() ?? string.Empty;
 
-                if (!TryParseUnit(targetText, out T target))
+                if (!TryParseUnit(targetText))
                 {
                     PrintAllowedUnits();
                     return;
                 }
 
-                result = _arithmeticService.AddToSpecificUnit(q1, q2, target);
-                Console.WriteLine($"\nResult: {q1.Value} {q1.Unit} + {q2.Value} {q2.Unit} = {result.Value} {result.Unit}");
+                request.TargetUnit = targetText;
+                var result = _applicationService.AddUnitsToTarget<T>(request);
+                Console.WriteLine($"\nResult: {result.Message}");
             }
             else
             {
-                result = _arithmeticService.AddUnit(q1, q2);
-                Console.WriteLine($"\nResult: {q1.Value} {q1.Unit} + {q2.Value} {q2.Unit} = {result.Value} {result.Unit}");
+                var result = _applicationService.AddUnits<T>(request);
+                Console.WriteLine($"\nResult: {result.Message}");
             }
         }
 
         private void SubtractUnits(bool useTargetUnit)
         {
-            Console.WriteLine(useTargetUnit ? "\n--- Subtraction to Specific Unit ---" : "\n--- Subtraction ---");
+            Console.WriteLine(useTargetUnit
+                ? "\n--- Subtraction to Specific Unit ---"
+                : "\n--- Subtraction ---");
 
-            var q1 = ReadQuantity("first");
-            var q2 = ReadQuantity("second");
+            var request = new BinaryQuantityRequestDto
+            {
+                FirstQuantity = ReadQuantityDto("first"),
+                SecondQuantity = ReadQuantityDto("second")
+            };
 
             if (useTargetUnit)
             {
                 Console.Write("Enter target unit: ");
-                string targetText = Console.ReadLine()!;
+                string targetText = Console.ReadLine() ?? string.Empty;
 
-                if (!TryParseUnit(targetText, out T target))
+                if (!TryParseUnit(targetText))
                 {
                     PrintAllowedUnits();
                     return;
                 }
 
-                var result = _arithmeticService.SubtractUnit(q1, q2, target);
-                Console.WriteLine($"\nResult: {q1.Value} {q1.Unit} - {q2.Value} {q2.Unit} = {result.Value} {result.Unit}");
+                request.TargetUnit = targetText;
+                var result = _applicationService.SubtractUnitsToTarget<T>(request);
+                Console.WriteLine($"\nResult: {result.Message}");
             }
             else
             {
-                var result = _arithmeticService.SubtractUnit(q1, q2, q1.Unit);
-                Console.WriteLine($"\nResult: {q1.Value} {q1.Unit} - {q2.Value} {q2.Unit} = {result.Value} {result.Unit}");
+                var result = _applicationService.SubtractUnits<T>(request);
+                Console.WriteLine($"\nResult: {result.Message}");
             }
         }
 
@@ -210,21 +229,25 @@ namespace QuantityMeasurementApp.ApplicationLayer.Menu
         {
             Console.WriteLine("\n--- Division ---");
 
-            var q1 = ReadQuantity("dividend (first)");
-            var q2 = ReadQuantity("divisor (second)");
+            var request = new BinaryQuantityRequestDto
+            {
+                FirstQuantity = ReadQuantityDto("dividend (first)"),
+                SecondQuantity = ReadQuantityDto("divisor (second)")
+            };
 
-            double result = _arithmeticService.DivideUnit(q1, q2);
-            Console.WriteLine($"\nResult: {q1.Value} {q1.Unit} ÷ {q2.Value} {q2.Unit} = {result:F4} (dimensionless)");
+            var result = _applicationService.DivideUnits<T>(request);
+            Console.WriteLine($"\nResult: {result.Message}");
         }
 
-        private bool TryParseUnit(string text, out T unit)
+        private bool TryParseUnit(string text)
         {
-            return Enum.TryParse(text, ignoreCase: true, out unit);
+            return Enum.TryParse<T>(text, true, out _);
         }
 
         private void PrintAllowedUnits()
         {
-            Console.WriteLine("Invalid Unit. Allowed: " + string.Join(", ", Enum.GetNames(typeof(T))));
+            Console.WriteLine($"{_unitTypeName} Unit Invalid. Allowed: " +
+                              string.Join(", ", Enum.GetNames(typeof(T))));
         }
     }
 }

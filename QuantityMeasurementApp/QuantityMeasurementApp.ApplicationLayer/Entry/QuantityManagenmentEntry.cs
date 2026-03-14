@@ -26,7 +26,7 @@ namespace QuantityMeasurementApp.ApplicationLayer.Entry
                 // Register Business Layer Services
                 services.AddScoped<IQuantityConversionService, QuantityConversionService>();
                 services.AddScoped<IQuantityArithmeticService, QuantityArithmeticService>();
-
+                services.AddScoped<QuantityApplicationService>();
                 // Register Generic Comparers
                 services.AddSingleton(typeof(QuantityEqualityComparer<>));
 
