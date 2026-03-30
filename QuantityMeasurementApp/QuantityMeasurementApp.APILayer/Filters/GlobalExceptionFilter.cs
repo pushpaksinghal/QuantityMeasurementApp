@@ -18,7 +18,7 @@ namespace QuantityMeasurementApp.APILayer.Filters
                 "Unhandled exception occurred while executing request.");
 
             int statusCode = StatusCodes.Status500InternalServerError;
-            string message = "An unexpected error occurred.";
+            string message = "error occurred.";
 
             if (context.Exception is ArgumentException ||
                 context.Exception is InvalidOperationException)
