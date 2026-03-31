@@ -69,6 +69,10 @@ try
     string connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
         ?? throw new InvalidOperationException("DefaultConnection not found.");
 
+    // Log connection string (without password for security)
+    var connectionStringBuilder = new Npgsql.NpgsqlConnectionStringBuilder(connectionString);
+    logger.Info($"Database connection configured for host: {connectionStringBuilder.Host}, database: {connectionStringBuilder.Database}");
+
     // FIX 1: Redis is optional — don't throw if it's empty
     string? redisConnection = builder.Configuration.GetConnectionString("Redis");
 
@@ -138,6 +142,11 @@ try
             options.Configuration = redisConnection;
             options.InstanceName = "QuantityApp:";
         });
+        logger.Info("Redis cache configured");
+    }
+    else
+    {
+        logger.Warn("Redis connection string not found - caching will be disabled");
     }
 
     builder.Services.AddSingleton(new DbConnectionFactory(connectionString));
@@ -173,7 +182,61 @@ try
 
     app.MapControllers();
 
+    // Basic health check endpoint
     app.MapGet("/ping", () => "API is working");
+
+    // Enhanced health check endpoint
+    app.MapGet("/health", () => new
+    {
+        status = "Healthy",
+        timestamp = DateTime.UtcNow,
+        environment = builder.Environment.EnvironmentName
+    });
+
+    // Database health check endpoint
+    app.MapGet("/health/database", async (QuantityDbContext quantityDb, AuthDbContext authDb) =>
+    {
+        var results = new Dictionary<string, object>();
+        
+        try
+        {
+            // Check QuantityDbContext
+            var quantityCanConnect = await quantityDb.Database.CanConnectAsync();
+            var quantityPendingMigrations = (await quantityDb.Database.GetPendingMigrationsAsync()).Count();
+            var quantityAppliedMigrations = (await quantityDb.Database.GetAppliedMigrationsAsync()).Count();
+            
+            results["QuantityDbContext"] = new
+            {
+                connected = quantityCanConnect,
+                pendingMigrations = quantityPendingMigrations,
+                appliedMigrations = quantityAppliedMigrations,
+                provider = quantityDb.Database.ProviderName
+            };
+            
+            // Check AuthDbContext
+            var authCanConnect = await authDb.Database.CanConnectAsync();
+            var authPendingMigrations = (await authDb.Database.GetPendingMigrationsAsync()).Count();
+            var authAppliedMigrations = (await authDb.Database.GetAppliedMigrationsAsync()).Count();
+            
+            results["AuthDbContext"] = new
+            {
+                connected = authCanConnect,
+                pendingMigrations = authPendingMigrations,
+                appliedMigrations = authAppliedMigrations,
+                provider = authDb.Database.ProviderName
+            };
+            
+            results["overall"] = quantityCanConnect && authCanConnect ? "Healthy" : "Degraded";
+            
+            return Results.Ok(results);
+        }
+        catch (Exception ex)
+        {
+            results["error"] = ex.Message;
+            results["overall"] = "Unhealthy";
+            return Results.Problem(detail: ex.Message, statusCode: 500);
+        }
+    });
 
     app.MapGet("/minimal/history", async (IQuantityApplicationService service) =>
     {
@@ -181,19 +244,99 @@ try
         return Results.Ok(data);
     });
 
+    // Apply migrations with detailed logging
+    logger.Info("Starting database migration process...");
+    
     using (var scope = app.Services.CreateScope())
     {
         var services = scope.ServiceProvider;
-
-        var quantityDb = services.GetRequiredService<QuantityDbContext>();
-        quantityDb.Database.Migrate();
-
-        var authDb = services.GetRequiredService<AuthDbContext>();
-        authDb.Database.Migrate();
+        
+        try
+        {
+            // Migrate QuantityDbContext
+            var quantityDb = services.GetRequiredService<QuantityDbContext>();
+            logger.Info("Checking QuantityDbContext for pending migrations...");
+            
+            var quantityPendingMigrations = await quantityDb.Database.GetPendingMigrationsAsync();
+            var quantityPendingList = quantityPendingMigrations.ToList();
+            
+            if (quantityPendingList.Any())
+            {
+                logger.Info($"Found {quantityPendingList.Count} pending migrations for QuantityDbContext:");
+                foreach (var migration in quantityPendingList)
+                {
+                    logger.Info($"  - {migration}");
+                }
+                
+                logger.Info("Applying QuantityDbContext migrations...");
+                await quantityDb.Database.MigrateAsync();
+                logger.Info("✅ QuantityDbContext migrations completed successfully");
+            }
+            else
+            {
+                logger.Info("✅ No pending migrations for QuantityDbContext");
+            }
+            
+            // Verify tables exist by checking if we can query
+            try
+            {
+                var canConnect = await quantityDb.Database.CanConnectAsync();
+                logger.Info($"QuantityDbContext connection test: {(canConnect ? "SUCCESS" : "FAILED")}");
+            }
+            catch (Exception ex)
+            {
+                logger.Error(ex, "QuantityDbContext connection test failed");
+            }
+            
+            // Migrate AuthDbContext
+            var authDb = services.GetRequiredService<AuthDbContext>();
+            logger.Info("Checking AuthDbContext for pending migrations...");
+            
+            var authPendingMigrations = await authDb.Database.GetPendingMigrationsAsync();
+            var authPendingList = authPendingMigrations.ToList();
+            
+            if (authPendingList.Any())
+            {
+                logger.Info($"Found {authPendingList.Count} pending migrations for AuthDbContext:");
+                foreach (var migration in authPendingList)
+                {
+                    logger.Info($"  - {migration}");
+                }
+                
+                logger.Info("Applying AuthDbContext migrations...");
+                await authDb.Database.MigrateAsync();
+                logger.Info("✅ AuthDbContext migrations completed successfully");
+            }
+            else
+            {
+                logger.Info("✅ No pending migrations for AuthDbContext");
+            }
+            
+            // Verify AuthDbContext connection
+            try
+            {
+                var canConnect = await authDb.Database.CanConnectAsync();
+                logger.Info($"AuthDbContext connection test: {(canConnect ? "SUCCESS" : "FAILED")}");
+            }
+            catch (Exception ex)
+            {
+                logger.Error(ex, "AuthDbContext connection test failed");
+            }
+            
+            logger.Info("Database migration process completed");
+        }
+        catch (Exception ex)
+        {
+            logger.Error(ex, "❌ Error applying database migrations");
+            throw;
+        }
     }
 
     var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
     app.Urls.Add($"http://*:{port}");
+    
+    logger.Info($"Application starting on port {port}");
+    logger.Info($"Health check available at /health and /health/database");
 
     app.Run();
 }
