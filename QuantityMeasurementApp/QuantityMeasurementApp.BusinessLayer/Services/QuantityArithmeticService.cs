@@ -56,6 +56,8 @@ namespace QuantityMeasurementApp.BusinessLayer.Services
             _validator.ValidateNotNull(q1, nameof(q1));
             _validator.ValidateNotNull(q2, nameof(q2));
             _validator.ValidateSameCategory(q1, q2);
+            _validator.ValidateArithmeticOperation(q1, q2);
+            
 
             double baseResult = PerformBaseOperation(q1, q2, ArithmeticOperation.Add);
 
@@ -71,6 +73,7 @@ namespace QuantityMeasurementApp.BusinessLayer.Services
             _validator.ValidateNotNull(q2, nameof(q2));
             _validator.ValidateEnumUnit(targetUnit, nameof(targetUnit));
             _validator.ValidateSameCategory(q1, q2);
+            _validator.ValidateArithmeticOperation(q1, q2);
             double baseResult = PerformBaseOperation(q1, q2, ArithmeticOperation.Add);
 
             var targetAdapter = _adapterFactory.CreateAdapter(targetUnit);
@@ -85,6 +88,7 @@ namespace QuantityMeasurementApp.BusinessLayer.Services
             _validator.ValidateNotNull(q2, nameof(q2));
             _validator.ValidateEnumUnit(targetUnit, nameof(targetUnit));
             _validator.ValidateSameCategory(q1, q2);
+            _validator.ValidateArithmeticOperation(q1, q2);
 
             double baseResult = PerformBaseOperation(q1, q2, ArithmeticOperation.Subtract);
 
@@ -99,6 +103,7 @@ namespace QuantityMeasurementApp.BusinessLayer.Services
             _validator.ValidateNotNull(q1, nameof(q1));
             _validator.ValidateNotNull(q2, nameof(q2));
             _validator.ValidateSameCategory(q1, q2);
+            _validator.ValidateArithmeticOperation(q1, q2);
 
             if (Math.Abs(q2.Value) < 1e-10)
                 throw new DivideByZeroException("Cannot divide by zero quantity.");

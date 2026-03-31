@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Microsoft.Data.SqlClient;
+using Npgsql;
 
 namespace QuantityMeasurementApp.RepositoryLayer.ConnectionFactory
 {
@@ -14,9 +14,9 @@ namespace QuantityMeasurementApp.RepositoryLayer.ConnectionFactory
             _connectionString = connectionString;
         }
 
-        public SqlConnection CreateConnection()
+        public NpgsqlConnection CreateConnection()
         {
-            return new SqlConnection(_connectionString);
+            return new NpgsqlConnection(_connectionString);
         }
     }
 }

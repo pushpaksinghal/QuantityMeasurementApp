@@ -66,13 +66,11 @@ try
         });
     });
 
-
-
     string connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
         ?? throw new InvalidOperationException("DefaultConnection not found.");
 
-    string redisConnection = builder.Configuration.GetConnectionString("Redis")
-        ?? throw new InvalidOperationException("Redis connection not found.");
+    // FIX 1: Redis is optional — don't throw if it's empty
+    string? redisConnection = builder.Configuration.GetConnectionString("Redis");
 
     string jwtKey = builder.Configuration["Jwt:Key"]
         ?? throw new InvalidOperationException("Jwt:Key not found.");
@@ -84,10 +82,10 @@ try
         ?? throw new InvalidOperationException("Jwt:Audience not found.");
 
     builder.Services.AddDbContext<QuantityDbContext>(options =>
-        options.UseSqlServer(connectionString));
+        options.UseNpgsql(connectionString));
 
     builder.Services.AddDbContext<AuthDbContext>(options =>
-        options.UseSqlServer(connectionString));
+        options.UseNpgsql(connectionString));
 
     builder.Services.AddIdentityCore<ApplicationUser>(options =>
     {
@@ -132,11 +130,15 @@ try
 
     builder.Services.AddAuthorization();
 
-    builder.Services.AddStackExchangeRedisCache(options =>
+    // FIX 1: Only register Redis if a connection string is actually provided
+    if (!string.IsNullOrEmpty(redisConnection))
     {
-        options.Configuration = redisConnection;
-        options.InstanceName = "QuantityApp:";
-    });
+        builder.Services.AddStackExchangeRedisCache(options =>
+        {
+            options.Configuration = redisConnection;
+            options.InstanceName = "QuantityApp:";
+        });
+    }
 
     builder.Services.AddSingleton(new DbConnectionFactory(connectionString));
     builder.Services.AddSingleton<UnitAdapterFactory>();
@@ -149,16 +151,23 @@ try
     builder.Services.AddScoped<RedisCacheService>();
     builder.Services.AddScoped<JwtTokenService>();
 
+    builder.Services.AddCors(options =>
+    {
+        // FIX 2: Removed .AllowCredentials() — it cannot be combined with AllowAnyOrigin()
+        options.AddPolicy("AllowAngular", policy =>
+        {
+            policy.AllowAnyOrigin()
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        });
+    });
 
     var app = builder.Build();
 
-    if (app.Environment.IsDevelopment())
-    {
-        app.UseSwagger();
-        app.UseSwaggerUI();
-    }
-
+    app.UseSwagger();
+    app.UseSwaggerUI();
     app.UseHttpsRedirection();
+    app.UseCors("AllowAngular");
     app.UseAuthentication();
     app.UseAuthorization();
 
@@ -171,6 +180,20 @@ try
         var data = await service.GetAllRecordsAsync();
         return Results.Ok(data);
     });
+
+    using (var scope = app.Services.CreateScope())
+    {
+        var services = scope.ServiceProvider;
+
+        var quantityDb = services.GetRequiredService<QuantityDbContext>();
+        quantityDb.Database.Migrate();
+
+        var authDb = services.GetRequiredService<AuthDbContext>();
+        authDb.Database.Migrate();
+    }
+
+    var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
+    app.Urls.Add($"http://*:{port}");
 
     app.Run();
 }

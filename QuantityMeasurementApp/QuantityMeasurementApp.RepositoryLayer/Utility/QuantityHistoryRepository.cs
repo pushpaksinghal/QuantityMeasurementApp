@@ -1,4 +1,4 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using Npgsql;
 using QuantityMeasurementApp.RepositoryLayer.ConnectionFactory;
 using QuantityMeasurementApp.RepositoryLayer.Interfaces;
 using QuantityMeasurementApp.RepositoryLayer.Records;
@@ -19,7 +19,7 @@ namespace QuantityMeasurementApp.RepositoryLayer.Utility
 
         public void AddRecord(QuantityHistoryRecord record)
         {
-            using SqlConnection connection = _connectionFactory.CreateConnection();
+            using NpgsqlConnection connection = _connectionFactory.CreateConnection();
             connection.Open();
 
             string query = @"
@@ -48,7 +48,7 @@ namespace QuantityMeasurementApp.RepositoryLayer.Utility
                     @ResultUnit
                 )";
 
-            using SqlCommand command = new SqlCommand(query, connection);
+            using NpgsqlCommand command = new NpgsqlCommand(query, connection);
             command.Parameters.AddWithValue("@Category", record.Category);
             command.Parameters.AddWithValue("@OperationType", record.OperationType);
             command.Parameters.AddWithValue("@FirstValue", record.FirstValue);
@@ -66,13 +66,13 @@ namespace QuantityMeasurementApp.RepositoryLayer.Utility
         {
             List<QuantityHistoryRecord> records = new List<QuantityHistoryRecord>();
 
-            using SqlConnection connection = _connectionFactory.CreateConnection();
+            using NpgsqlConnection connection = _connectionFactory.CreateConnection();
             connection.Open();
 
             string query = "SELECT * FROM QuantityHistory ORDER BY Id DESC";
 
-            using SqlCommand command = new SqlCommand(query, connection);
-            using SqlDataReader reader = command.ExecuteReader();
+            using NpgsqlCommand command = new NpgsqlCommand(query, connection);
+            using NpgsqlDataReader reader = command.ExecuteReader();
 
             while (reader.Read())
             {
@@ -97,15 +97,15 @@ namespace QuantityMeasurementApp.RepositoryLayer.Utility
 
         public QuantityHistoryRecord? GetRecordById(int id)
         {
-            using SqlConnection connection = _connectionFactory.CreateConnection();
+            using NpgsqlConnection connection = _connectionFactory.CreateConnection();
             connection.Open();
 
             string query = "SELECT * FROM QuantityHistory WHERE Id = @Id";
 
-            using SqlCommand command = new SqlCommand(query, connection);
+            using NpgsqlCommand command = new NpgsqlCommand(query, connection);
             command.Parameters.AddWithValue("@Id", id);
 
-            using SqlDataReader reader = command.ExecuteReader();
+            using NpgsqlDataReader reader = command.ExecuteReader();
 
             if (reader.Read())
             {
@@ -130,12 +130,12 @@ namespace QuantityMeasurementApp.RepositoryLayer.Utility
 
         public bool DeleteRecord(int id)
         {
-            using SqlConnection connection = _connectionFactory.CreateConnection();
+            using NpgsqlConnection connection = _connectionFactory.CreateConnection();
             connection.Open();
 
             string query = "DELETE FROM QuantityHistory WHERE Id = @Id";
 
-            using SqlCommand command = new SqlCommand(query, connection);
+            using NpgsqlCommand command = new NpgsqlCommand(query, connection);
             command.Parameters.AddWithValue("@Id", id);
 
             int rowsAffected = command.ExecuteNonQuery();

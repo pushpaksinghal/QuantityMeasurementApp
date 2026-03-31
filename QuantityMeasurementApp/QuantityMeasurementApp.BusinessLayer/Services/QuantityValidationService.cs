@@ -1,4 +1,5 @@
 ﻿using QuantityMeasurementApp.ModelLayer.Entity;
+using QuantityMeasurementApp.ModelLayer.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -36,6 +37,15 @@ namespace QuantityMeasurementApp.BusinessLayer.Services
         public bool AreEqual(double value1, double value2)
         {
             return Math.Abs(value1 - value2) <= Epsilon;
+        }
+
+        public void ValidateArithmeticOperation<T>(Quantity<T> first, Quantity<T> second) where T : struct, Enum
+        {
+            if (typeof(T) == typeof(TemperatureUnit))
+            {
+                throw new InvalidOperationException(
+                    "Arithmetic operations are not allowed for temperature.");
+            }
         }
     }
 }

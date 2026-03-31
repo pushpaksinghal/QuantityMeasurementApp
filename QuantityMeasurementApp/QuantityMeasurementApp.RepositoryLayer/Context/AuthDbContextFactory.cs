@@ -17,7 +17,7 @@ namespace QuantityMeasurementApp.RepositoryLayer.Context
                 ?? throw new InvalidOperationException("DefaultConnection not found.");
 
             var optionsBuilder = new DbContextOptionsBuilder<AuthDbContext>();
-            optionsBuilder.UseSqlServer(connectionString);
+            optionsBuilder.UseNpgsql(connectionString);
 
             return new AuthDbContext(optionsBuilder.Options);
         }
