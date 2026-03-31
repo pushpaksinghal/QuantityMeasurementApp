@@ -5,7 +5,7 @@ WORKDIR /app
 COPY . .
 
 # Restore and publish the API project
-WORKDIR /app/QuantityMeasurementApp/QuantityMeasurementApp.APILayer
+WORKDIR /app/QuantityMeasurementApp.APILayer
 RUN dotnet publish -c Release -o /out
 
 # Final runtime image
