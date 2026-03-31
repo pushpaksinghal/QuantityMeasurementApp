@@ -242,25 +242,31 @@ try
         }
     });
 
-    // ✅ Add Redis health check endpoint
+    // Redis health check endpoint
     app.MapGet("/health/redis", async (RedisCacheService redisCache) =>
     {
         try
         {
-            await redisCache.SetAsync("health_check", "OK", TimeSpan.FromMinutes(1));
+            // Test Redis cache by setting and getting a value
+            await redisCache.SetAsync("health_check", "OK", 1, 1); // Expires in 1 minute
             var result = await redisCache.GetAsync<string>("health_check");
             
             return Results.Ok(new 
             { 
                 status = result == "OK" ? "Connected" : "Failed",
-                cacheType = redisConnection != null ? "Redis (Upstash)" : "In-Memory (Fallback)",
-                configured = redisConnection != null,
-                testResult = result
+                cacheType = !string.IsNullOrEmpty(redisConnection) ? "Redis (Upstash)" : "In-Memory (Fallback)",
+                configured = !string.IsNullOrEmpty(redisConnection),
+                testResult = result,
+                message = "Redis cache is working correctly"
             });
         }
         catch (Exception ex)
         {
-            return Results.Problem($"Redis health check failed: {ex.Message}");
+            return Results.Problem(
+                detail: ex.Message, 
+                statusCode: 500,
+                title: "Redis connection failed"
+            );
         }
     });
 

@@ -6041,11 +6041,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\cshrpProject\\QuantityMeasurementApp.App\\QuantityMeasurementApp.Test\\QuantityMeasurementApp.Test.csproj",
+      "projectUniqueName": "D:\\QuantityMeasurementApp\\QuantityMeasurementApp\\QuantityMeasurementApp.Test\\QuantityMeasurementApp.Test.csproj",
       "projectName": "QuantityMeasurementApp.Test",
-      "projectPath": "E:\\cshrpProject\\QuantityMeasurementApp.App\\QuantityMeasurementApp.Test\\QuantityMeasurementApp.Test.csproj",
+      "projectPath": "D:\\QuantityMeasurementApp\\QuantityMeasurementApp\\QuantityMeasurementApp.Test\\QuantityMeasurementApp.Test.csproj",
       "packagesPath": "C:\\Users\\Pushp\\.nuget\\packages\\",
-      "outputPath": "E:\\cshrpProject\\QuantityMeasurementApp.App\\QuantityMeasurementApp.Test\\obj\\",
+      "outputPath": "D:\\QuantityMeasurementApp\\QuantityMeasurementApp\\QuantityMeasurementApp.Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -6067,8 +6067,8 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "E:\\cshrpProject\\QuantityMeasurementApp.App\\QuantityMeasurementApp.BusinessLayer\\QuantityMeasurementApp.BusinessLayer.csproj": {
-              "projectPath": "E:\\cshrpProject\\QuantityMeasurementApp.App\\QuantityMeasurementApp.BusinessLayer\\QuantityMeasurementApp.BusinessLayer.csproj"
+            "D:\\QuantityMeasurementApp\\QuantityMeasurementApp\\QuantityMeasurementApp.BusinessLayer\\QuantityMeasurementApp.BusinessLayer.csproj": {
+              "projectPath": "D:\\QuantityMeasurementApp\\QuantityMeasurementApp\\QuantityMeasurementApp.BusinessLayer\\QuantityMeasurementApp.BusinessLayer.csproj"
             }
           }
         }

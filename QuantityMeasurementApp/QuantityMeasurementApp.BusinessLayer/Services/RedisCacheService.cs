@@ -24,16 +24,15 @@ namespace QuantityMeasurementApp.BusinessLayer.Services
             return JsonSerializer.Deserialize<T>(jsonDATA);
         }
 
-        public async Task SetAsync<T>(string key, T value,int absoulteMinutes =10,int slidingMinutes = 5)
+        public async Task SetAsync<T>(string key, T value, int absoluteMinutes = 10, int slidingMinutes = 5)
         {
             var option = new DistributedCacheEntryOptions
             {
-                AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(absoulteMinutes),
+                AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(absoluteMinutes),
                 SlidingExpiration = TimeSpan.FromMinutes(slidingMinutes)
             };
-            string jsaonDATA = JsonSerializer.Serialize(value);
-            await _cache.SetStringAsync(key, jsaonDATA, option);
-
+            string jsonData = JsonSerializer.Serialize(value);
+            await _cache.SetStringAsync(key, jsonData, option);
         }
 
         public async Task RemoveAsync(String key)

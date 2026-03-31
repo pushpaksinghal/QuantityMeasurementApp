@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\cshrpProject\\QuantityMeasurementApp.App\\QuantityMeasurementApp.RepositoryLayer\\QuantityMeasurementApp.RepositoryLayer.csproj": {}
+    "D:\\QuantityMeasurementApp\\QuantityMeasurementApp\\QuantityMeasurementApp.RepositoryLayer\\QuantityMeasurementApp.RepositoryLayer.csproj": {}
   },
   "projects": {
-    "E:\\cshrpProject\\QuantityMeasurementApp.App\\QuantityMeasurementApp.ModelLayer\\QuantityMeasurementApp.ModelLayer.csproj": {
+    "D:\\QuantityMeasurementApp\\QuantityMeasurementApp\\QuantityMeasurementApp.ModelLayer\\QuantityMeasurementApp.ModelLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\cshrpProject\\QuantityMeasurementApp.App\\QuantityMeasurementApp.ModelLayer\\QuantityMeasurementApp.ModelLayer.csproj",
+        "projectUniqueName": "D:\\QuantityMeasurementApp\\QuantityMeasurementApp\\QuantityMeasurementApp.ModelLayer\\QuantityMeasurementApp.ModelLayer.csproj",
         "projectName": "QuantityMeasurementApp.ModelLayer",
-        "projectPath": "E:\\cshrpProject\\QuantityMeasurementApp.App\\QuantityMeasurementApp.ModelLayer\\QuantityMeasurementApp.ModelLayer.csproj",
+        "projectPath": "D:\\QuantityMeasurementApp\\QuantityMeasurementApp\\QuantityMeasurementApp.ModelLayer\\QuantityMeasurementApp.ModelLayer.csproj",
         "packagesPath": "C:\\Users\\Pushp\\.nuget\\packages\\",
-        "outputPath": "E:\\cshrpProject\\QuantityMeasurementApp.App\\QuantityMeasurementApp.ModelLayer\\obj\\",
+        "outputPath": "D:\\QuantityMeasurementApp\\QuantityMeasurementApp\\QuantityMeasurementApp.ModelLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -362,14 +362,14 @@
         }
       }
     },
-    "E:\\cshrpProject\\QuantityMeasurementApp.App\\QuantityMeasurementApp.RepositoryLayer\\QuantityMeasurementApp.RepositoryLayer.csproj": {
+    "D:\\QuantityMeasurementApp\\QuantityMeasurementApp\\QuantityMeasurementApp.RepositoryLayer\\QuantityMeasurementApp.RepositoryLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\cshrpProject\\QuantityMeasurementApp.App\\QuantityMeasurementApp.RepositoryLayer\\QuantityMeasurementApp.RepositoryLayer.csproj",
+        "projectUniqueName": "D:\\QuantityMeasurementApp\\QuantityMeasurementApp\\QuantityMeasurementApp.RepositoryLayer\\QuantityMeasurementApp.RepositoryLayer.csproj",
         "projectName": "QuantityMeasurementApp.RepositoryLayer",
-        "projectPath": "E:\\cshrpProject\\QuantityMeasurementApp.App\\QuantityMeasurementApp.RepositoryLayer\\QuantityMeasurementApp.RepositoryLayer.csproj",
+        "projectPath": "D:\\QuantityMeasurementApp\\QuantityMeasurementApp\\QuantityMeasurementApp.RepositoryLayer\\QuantityMeasurementApp.RepositoryLayer.csproj",
         "packagesPath": "C:\\Users\\Pushp\\.nuget\\packages\\",
-        "outputPath": "E:\\cshrpProject\\QuantityMeasurementApp.App\\QuantityMeasurementApp.RepositoryLayer\\obj\\",
+        "outputPath": "D:\\QuantityMeasurementApp\\QuantityMeasurementApp\\QuantityMeasurementApp.RepositoryLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -391,8 +391,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "E:\\cshrpProject\\QuantityMeasurementApp.App\\QuantityMeasurementApp.ModelLayer\\QuantityMeasurementApp.ModelLayer.csproj": {
-                "projectPath": "E:\\cshrpProject\\QuantityMeasurementApp.App\\QuantityMeasurementApp.ModelLayer\\QuantityMeasurementApp.ModelLayer.csproj"
+              "D:\\QuantityMeasurementApp\\QuantityMeasurementApp\\QuantityMeasurementApp.ModelLayer\\QuantityMeasurementApp.ModelLayer.csproj": {
+                "projectPath": "D:\\QuantityMeasurementApp\\QuantityMeasurementApp\\QuantityMeasurementApp.ModelLayer\\QuantityMeasurementApp.ModelLayer.csproj"
               }
             }
           }

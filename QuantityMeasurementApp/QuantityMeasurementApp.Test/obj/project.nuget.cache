@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3Ewl3xE4Bzw=",
+  "dgSpecHash": "PQuc3Cby3wo=",
   "success": true,
-  "projectFilePath": "E:\\cshrpProject\\QuantityMeasurementApp.App\\QuantityMeasurementApp.Test\\QuantityMeasurementApp.Test.csproj",
+  "projectFilePath": "D:\\QuantityMeasurementApp\\QuantityMeasurementApp\\QuantityMeasurementApp.Test\\QuantityMeasurementApp.Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Pushp\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Pushp\\.nuget\\packages\\microsoft.applicationinsights\\2.23.0\\microsoft.applicationinsights.2.23.0.nupkg.sha512",
