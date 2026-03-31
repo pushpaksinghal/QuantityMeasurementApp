@@ -129,7 +129,7 @@ try
     });
 
     builder.Services.AddAuthorization();
-    builder.Services.AddDistributedMemoryCache();
+
     // FIX 1: Only register Redis if a connection string is actually provided
     if (!string.IsNullOrEmpty(redisConnection))
     {
@@ -166,6 +166,7 @@ try
 
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.UseHttpsRedirection();
     app.UseCors("AllowAngular");
     app.UseAuthentication();
     app.UseAuthorization();
