@@ -1,0 +1,17 @@
+{
+  "settings": {
+    "documentationRules": {
+      "companyName": "QuantityMeasurementApp",
+      "documentExposedElements": false
+    },
+    "namingRules": {
+      "allowCommonHungarianPrefixes": false
+    },
+    "orderingRules": {
+      "usingDirectivesPlacement": "outsideNamespace"
+    },
+    "layoutRules": {
+      "newlineAtEndOfFile": "require"
+    }
+  }
+}

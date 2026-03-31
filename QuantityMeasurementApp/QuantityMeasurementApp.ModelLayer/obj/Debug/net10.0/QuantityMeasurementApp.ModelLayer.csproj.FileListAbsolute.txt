@@ -1,0 +1,14 @@
+E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.ModelLayer\bin\Debug\net10.0\QuantityMeasurementApp.ModelLayer.deps.json
+E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.ModelLayer\bin\Debug\net10.0\QuantityMeasurementApp.ModelLayer.runtimeconfig.json
+E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.ModelLayer\bin\Debug\net10.0\QuantityMeasurementApp.ModelLayer.dll
+E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.ModelLayer\bin\Debug\net10.0\QuantityMeasurementApp.ModelLayer.pdb
+E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.ModelLayer\obj\Debug\net10.0\QuantityMeasurementApp.ModelLayer.csproj.AssemblyReference.cache
+E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.ModelLayer\obj\Debug\net10.0\QuantityMeasurementApp.ModelLayer.GeneratedMSBuildEditorConfig.editorconfig
+E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.ModelLayer\obj\Debug\net10.0\QuantityMeasurementApp.ModelLayer.AssemblyInfoInputs.cache
+E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.ModelLayer\obj\Debug\net10.0\QuantityMeasurementApp.ModelLayer.AssemblyInfo.cs
+E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.ModelLayer\obj\Debug\net10.0\QuantityMeasurementApp.ModelLayer.csproj.CoreCompileInputs.cache
+E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.ModelLayer\obj\Debug\net10.0\QuantityMeasurementApp.ModelLayer.dll
+E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.ModelLayer\obj\Debug\net10.0\refint\QuantityMeasurementApp.ModelLayer.dll
+E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.ModelLayer\obj\Debug\net10.0\QuantityMeasurementApp.ModelLayer.pdb
+E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.ModelLayer\obj\Debug\net10.0\QuantityMeasurementApp.ModelLayer.genruntimeconfig.cache
+E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.ModelLayer\obj\Debug\net10.0\ref\QuantityMeasurementApp.ModelLayer.dll

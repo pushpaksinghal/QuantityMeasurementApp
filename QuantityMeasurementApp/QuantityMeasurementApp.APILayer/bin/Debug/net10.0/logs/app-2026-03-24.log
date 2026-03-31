@@ -1,0 +1,25 @@
+2026-03-24 11:31:08.9418|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking cache for key History:all|
+2026-03-24 11:31:11.6469|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Cache miss for key History:all. Fetching from database|
+2026-03-24 11:31:13.6399|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Cached 6 records for key History:all|
+2026-03-24 16:21:10.7264|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Auth/Login|
+2026-03-24 16:21:10.7555|INFO|QuantityMeasurementApp.APILayer.Controllers.AuthController|Login called for email pushpaksinghal1234@gmail.com|
+2026-03-24 16:21:13.0684|INFO|QuantityMeasurementApp.APILayer.Controllers.AuthController|Login successful for email pushpaksinghal1234@gmail.com|
+2026-03-24 16:21:13.0684|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Auth/Login|
+2026-03-24 16:21:34.9623|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action History/GetAll|
+2026-03-24 16:21:34.9623|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll history records called|
+2026-03-24 16:21:34.9623|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking cache for key History:all|
+2026-03-24 16:21:37.3346|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Cache miss for key History:all. Fetching from database|
+2026-03-24 16:21:37.3719|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Cached 6 records for key History:all|
+2026-03-24 16:21:37.3719|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll returned 6 records|
+2026-03-24 16:21:37.3719|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action History/GetAll|
+2026-03-24 16:24:28.4462|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Auth/GoogleLogin|
+2026-03-24 16:24:28.4768|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Auth/GoogleLogin|
+2026-03-24 16:24:34.3795|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Auth/GoogleResponse|
+2026-03-24 16:24:34.4421|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Auth/GoogleResponse|
+2026-03-24 16:32:53.1008|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action History/GetAll|
+2026-03-24 16:32:53.1008|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll history records called|
+2026-03-24 16:32:53.1008|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking cache for key History:all|
+2026-03-24 16:32:53.1008|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Cache miss for key History:all. Fetching from database|
+2026-03-24 16:32:53.1632|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Cached 6 records for key History:all|
+2026-03-24 16:32:53.1632|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll returned 6 records|
+2026-03-24 16:32:53.1632|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action History/GetAll|

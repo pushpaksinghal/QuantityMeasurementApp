@@ -1,0 +1,17 @@
+E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.RepositoryLayer\bin\Debug\net10.0\QuantityMeasurementApp.RepositoryLayer.deps.json
+E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.RepositoryLayer\bin\Debug\net10.0\QuantityMeasurementApp.RepositoryLayer.runtimeconfig.json
+E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.RepositoryLayer\bin\Debug\net10.0\QuantityMeasurementApp.RepositoryLayer.dll
+E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.RepositoryLayer\bin\Debug\net10.0\QuantityMeasurementApp.RepositoryLayer.pdb
+E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.RepositoryLayer\bin\Debug\net10.0\QuantityMeasurementApp.ModelLayer.dll
+E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.RepositoryLayer\bin\Debug\net10.0\QuantityMeasurementApp.ModelLayer.pdb
+E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.RepositoryLayer\obj\Debug\net10.0\QuantityMeasurementApp.RepositoryLayer.csproj.AssemblyReference.cache
+E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.RepositoryLayer\obj\Debug\net10.0\QuantityMeasurementApp.RepositoryLayer.GeneratedMSBuildEditorConfig.editorconfig
+E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.RepositoryLayer\obj\Debug\net10.0\QuantityMeasurementApp.RepositoryLayer.AssemblyInfoInputs.cache
+E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.RepositoryLayer\obj\Debug\net10.0\QuantityMeasurementApp.RepositoryLayer.AssemblyInfo.cs
+E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.RepositoryLayer\obj\Debug\net10.0\QuantityMeasurementApp.RepositoryLayer.csproj.CoreCompileInputs.cache
+E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.RepositoryLayer\obj\Debug\net10.0\Quantity.65CC22B0.Up2Date
+E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.RepositoryLayer\obj\Debug\net10.0\QuantityMeasurementApp.RepositoryLayer.dll
+E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.RepositoryLayer\obj\Debug\net10.0\refint\QuantityMeasurementApp.RepositoryLayer.dll
+E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.RepositoryLayer\obj\Debug\net10.0\QuantityMeasurementApp.RepositoryLayer.pdb
+E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.RepositoryLayer\obj\Debug\net10.0\QuantityMeasurementApp.RepositoryLayer.genruntimeconfig.cache
+E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.RepositoryLayer\obj\Debug\net10.0\ref\QuantityMeasurementApp.RepositoryLayer.dll

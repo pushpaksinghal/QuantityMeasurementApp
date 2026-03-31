@@ -1,0 +1,86 @@
+2026-03-26 10:41:31.8495|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Auth/Login|
+2026-03-26 10:41:31.8732|INFO|QuantityMeasurementApp.APILayer.Controllers.AuthController|Login called for email pushpaksinghal1234@gmail.com|
+2026-03-26 10:41:34.2741|INFO|QuantityMeasurementApp.APILayer.Controllers.AuthController|Login successful for email pushpaksinghal1234@gmail.com|
+2026-03-26 10:41:34.2741|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Auth/Login|
+2026-03-26 10:41:53.9680|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action History/GetAll|
+2026-03-26 10:41:53.9680|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll history records called|
+2026-03-26 10:41:53.9680|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking cache for key History:all|
+2026-03-26 10:41:56.3456|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Cache miss for key History:all. Fetching from database|
+2026-03-26 10:41:56.3946|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Cached 11 records for key History:all|
+2026-03-26 10:41:56.3946|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll returned 11 records|
+2026-03-26 10:41:56.3946|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action History/GetAll|
+2026-03-26 10:42:43.4033|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Quantity/SameAdd|
+2026-03-26 10:42:43.4033|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|SameAdd called for type Temperature|
+2026-03-26 10:42:43.4033|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Add operation started|
+2026-03-26 10:50:21.1200|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Auth/Login|
+2026-03-26 10:50:21.1449|INFO|QuantityMeasurementApp.APILayer.Controllers.AuthController|Login called for email pushpaksinghal1234@gmail.com|
+2026-03-26 10:50:22.8988|INFO|QuantityMeasurementApp.APILayer.Controllers.AuthController|Login successful for email pushpaksinghal1234@gmail.com|
+2026-03-26 10:50:22.8988|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Auth/Login|
+2026-03-26 10:51:13.6607|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Quantity/SameAdd|
+2026-03-26 10:51:13.6607|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|SameAdd called for type temperature|
+2026-03-26 10:51:13.6607|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Add operation started|
+2026-03-26 10:51:13.7032|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Quantity/SameAdd|
+2026-03-26 10:59:59.6058|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Auth/Login|
+2026-03-26 10:59:59.6219|INFO|QuantityMeasurementApp.APILayer.Controllers.AuthController|Login called for email pushpaksinghal1234@gmail.com|
+2026-03-26 11:00:01.2854|INFO|QuantityMeasurementApp.APILayer.Controllers.AuthController|Login successful for email pushpaksinghal1234@gmail.com|
+2026-03-26 11:00:01.2854|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Auth/Login|
+2026-03-26 11:01:06.3270|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Quantity/SameAdd|
+2026-03-26 11:01:06.3270|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|SameAdd called for type temperature|
+2026-03-26 11:01:06.3270|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Add operation started|
+2026-03-26 11:02:38.8861|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Quantity/SameAdd|
+2026-03-26 11:02:38.9619|ERROR|QuantityMeasurementApp.APILayer.Filters.GlobalExceptionFilter|Unhandled exception occurred while executing request.|System.InvalidOperationException: Arithmetic operations are not allowed for temperature.
+   at QuantityMeasurementApp.BusinessLayer.Services.QuantityValidationService.ValidateArithmeticOperation[T](Quantity`1 first, Quantity`1 second) in E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.BusinessLayer\Services\QuantityValidationService.cs:line 46
+   at QuantityMeasurementApp.BusinessLayer.Services.QuantityArithmeticService.AddUnit[T](Quantity`1 q1, Quantity`1 q2) in E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.BusinessLayer\Services\QuantityArithmeticService.cs:line 59
+   at QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService.AddUnits[T](BinaryQuantityRequestDto request) in E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.BusinessLayer\Services\QuantityApplicationService.cs:line 103
+   at QuantityMeasurementApp.APILayer.Controllers.QuantityController.SameAdd(String type, BinaryQuantityRequestDto request) in E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.APILayer\Controllers\QuantityController.cs:line 64
+   at lambda_method128(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2026-03-26 11:03:09.8100|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Quantity/SameAdd|
+2026-03-26 11:03:09.8104|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|SameAdd called for type temperature|
+2026-03-26 11:03:09.8104|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Add operation started|
+2026-03-26 11:04:07.9741|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Quantity/SameAdd|
+2026-03-26 11:04:08.0057|ERROR|QuantityMeasurementApp.APILayer.Filters.GlobalExceptionFilter|Unhandled exception occurred while executing request.|System.InvalidOperationException: Arithmetic operations are not allowed for temperature.
+   at QuantityMeasurementApp.BusinessLayer.Services.QuantityValidationService.ValidateArithmeticOperation[T](Quantity`1 first, Quantity`1 second) in E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.BusinessLayer\Services\QuantityValidationService.cs:line 46
+   at QuantityMeasurementApp.BusinessLayer.Services.QuantityArithmeticService.AddUnit[T](Quantity`1 q1, Quantity`1 q2) in E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.BusinessLayer\Services\QuantityArithmeticService.cs:line 59
+   at QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService.AddUnits[T](BinaryQuantityRequestDto request) in E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.BusinessLayer\Services\QuantityApplicationService.cs:line 103
+   at QuantityMeasurementApp.APILayer.Controllers.QuantityController.SameAdd(String type, BinaryQuantityRequestDto request) in E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.APILayer\Controllers\QuantityController.cs:line 64
+   at lambda_method128(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2026-03-26 11:04:11.9042|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Quantity/SameAdd|
+2026-03-26 11:04:11.9042|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|SameAdd called for type temperature|
+2026-03-26 11:04:11.9042|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Add operation started|
+2026-03-26 11:04:11.9220|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Quantity/SameAdd|
+2026-03-26 11:04:11.9220|ERROR|QuantityMeasurementApp.APILayer.Filters.GlobalExceptionFilter|Unhandled exception occurred while executing request.|System.InvalidOperationException: Arithmetic operations are not allowed for temperature.
+   at QuantityMeasurementApp.BusinessLayer.Services.QuantityValidationService.ValidateArithmeticOperation[T](Quantity`1 first, Quantity`1 second) in E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.BusinessLayer\Services\QuantityValidationService.cs:line 46
+   at QuantityMeasurementApp.BusinessLayer.Services.QuantityArithmeticService.AddUnit[T](Quantity`1 q1, Quantity`1 q2) in E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.BusinessLayer\Services\QuantityArithmeticService.cs:line 59
+   at QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService.AddUnits[T](BinaryQuantityRequestDto request) in E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.BusinessLayer\Services\QuantityApplicationService.cs:line 103
+   at QuantityMeasurementApp.APILayer.Controllers.QuantityController.SameAdd(String type, BinaryQuantityRequestDto request) in E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.APILayer\Controllers\QuantityController.cs:line 64
+   at lambda_method128(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)

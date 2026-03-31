@@ -1,0 +1,10 @@
+2026-03-31 11:28:16.4782|ERROR|QuantityMeasurementApp.APILayer.Program|Application stopped because of an exception|System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: QuantityMeasurementApp.BusinessLayer.Interface.IQuantityApplicationService Lifetime: Scoped ImplementationType: QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService': Unable to resolve service for type 'QuantityMeasurementApp.BusinessLayer.Services.RedisCacheService' while attempting to activate 'QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'QuantityMeasurementApp.BusinessLayer.Services.RedisCacheService' while attempting to activate 'QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)

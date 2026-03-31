@@ -1,0 +1,106 @@
+2026-03-25 23:17:57.0541|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Auth/GoogleLogin|
+2026-03-25 23:17:57.0930|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Auth/GoogleLogin|
+2026-03-25 23:18:03.1615|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Auth/GoogleResponse|
+2026-03-25 23:18:05.4604|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Auth/GoogleResponse|
+2026-03-25 23:25:25.1509|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Auth/GoogleLogin|
+2026-03-25 23:25:25.1933|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Auth/GoogleLogin|
+2026-03-25 23:25:29.7705|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Auth/GoogleResponse|
+2026-03-25 23:25:31.2839|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Auth/GoogleResponse|
+2026-03-25 23:30:48.1888|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Auth/GoogleLogin|
+2026-03-25 23:30:48.1888|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Auth/GoogleLogin|
+2026-03-25 23:30:52.9817|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Auth/GoogleResponse|
+2026-03-25 23:30:53.0735|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Auth/GoogleResponse|
+2026-03-25 23:47:51.0941|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Auth/Register|
+2026-03-25 23:47:51.1215|INFO|QuantityMeasurementApp.APILayer.Controllers.AuthController|Register called for email john@gmail.com|
+2026-03-25 23:47:52.8209|INFO|QuantityMeasurementApp.APILayer.Controllers.AuthController|Registration successful for email john@gmail.com|
+2026-03-25 23:47:52.8209|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Auth/Register|
+2026-03-25 23:47:53.1154|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action History/GetAll|
+2026-03-25 23:47:53.1154|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll history records called|
+2026-03-25 23:47:53.1154|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking cache for key History:all|
+2026-03-25 23:47:55.5905|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Cache miss for key History:all. Fetching from database|
+2026-03-25 23:47:55.6389|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Cached 6 records for key History:all|
+2026-03-25 23:47:55.6389|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll returned 6 records|
+2026-03-25 23:47:55.6389|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action History/GetAll|
+2026-03-25 23:48:24.4837|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Quantity/EqualsCheck|
+2026-03-25 23:48:24.4837|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|EqualsCheck called for type length|
+2026-03-25 23:48:24.4837|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking equality|
+2026-03-25 23:48:24.4837|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Equality result: False|
+2026-03-25 23:48:24.4891|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|EqualsCheck result for type length: False|
+2026-03-25 23:48:24.4891|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Quantity/EqualsCheck|
+2026-03-25 23:48:25.0774|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action History/GetAll|
+2026-03-25 23:48:25.0774|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll history records called|
+2026-03-25 23:48:25.0774|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking cache for key History:all|
+2026-03-25 23:48:25.0879|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Cache hit for key History:all|
+2026-03-25 23:48:25.0879|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll returned 6 records|
+2026-03-25 23:48:25.0879|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action History/GetAll|
+2026-03-25 23:48:37.4583|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Quantity/Convert|
+2026-03-25 23:48:37.4583|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|Convert called for type length|
+2026-03-25 23:48:37.4583|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Convert operation started|
+2026-03-25 23:48:37.4850|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|History saved and cache invalidated for key History:all|
+2026-03-25 23:48:37.4850|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Conversion completed: 15 FEET -> 180 INCH|
+2026-03-25 23:48:37.4890|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|Convert successful for type length: 15 FEET = 180 INCH|
+2026-03-25 23:48:37.4890|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Quantity/Convert|
+2026-03-25 23:48:38.0595|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action History/GetAll|
+2026-03-25 23:48:38.0595|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll history records called|
+2026-03-25 23:48:38.0595|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking cache for key History:all|
+2026-03-25 23:48:38.0595|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Cache miss for key History:all. Fetching from database|
+2026-03-25 23:48:38.0595|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Cached 7 records for key History:all|
+2026-03-25 23:48:38.0595|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll returned 7 records|
+2026-03-25 23:48:38.0595|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action History/GetAll|
+2026-03-25 23:48:52.6041|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Quantity/SameSubtract|
+2026-03-25 23:48:52.6041|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|SameSubtract called for type length|
+2026-03-25 23:48:52.6041|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Subtract operation started|
+2026-03-25 23:48:52.6216|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|History saved and cache invalidated for key History:all|
+2026-03-25 23:48:52.6216|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Subtraction completed: 0.9166666666666666 FEET|
+2026-03-25 23:48:52.6216|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|SameSubtract successful for type length: 1 FEET - 1 INCH = 0.9166666666666666 FEET|
+2026-03-25 23:48:52.6216|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Quantity/SameSubtract|
+2026-03-25 23:48:52.6216|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action History/GetAll|
+2026-03-25 23:48:52.6216|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll history records called|
+2026-03-25 23:48:52.6216|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking cache for key History:all|
+2026-03-25 23:48:52.6216|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Cache miss for key History:all. Fetching from database|
+2026-03-25 23:48:52.6311|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Cached 8 records for key History:all|
+2026-03-25 23:48:52.6311|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll returned 8 records|
+2026-03-25 23:48:52.6311|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action History/GetAll|
+2026-03-25 23:48:58.4509|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Quantity/SameSubtract|
+2026-03-25 23:48:58.4509|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|SameSubtract called for type temperature|
+2026-03-25 23:48:58.4509|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Subtract operation started|
+2026-03-25 23:48:58.4596|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|History saved and cache invalidated for key History:all|
+2026-03-25 23:48:58.4596|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Subtraction completed: 18.22222222222222 CELSIUS|
+2026-03-25 23:48:58.4596|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|SameSubtract successful for type temperature: 1 CELSIUS - 1 FAHRENHEIT = 18.22222222222222 CELSIUS|
+2026-03-25 23:48:58.4596|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Quantity/SameSubtract|
+2026-03-25 23:48:58.4596|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action History/GetAll|
+2026-03-25 23:48:58.4596|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll history records called|
+2026-03-25 23:48:58.4596|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking cache for key History:all|
+2026-03-25 23:48:58.4596|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Cache miss for key History:all. Fetching from database|
+2026-03-25 23:48:58.4596|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Cached 9 records for key History:all|
+2026-03-25 23:48:58.4596|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll returned 9 records|
+2026-03-25 23:48:58.4596|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action History/GetAll|
+2026-03-25 23:49:55.4187|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Quantity/Convert|
+2026-03-25 23:49:55.4187|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|Convert called for type temperature|
+2026-03-25 23:49:55.4187|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Convert operation started|
+2026-03-25 23:49:55.4363|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|History saved and cache invalidated for key History:all|
+2026-03-25 23:49:55.4363|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Conversion completed: 15 CELSIUS -> 59 FAHRENHEIT|
+2026-03-25 23:49:55.4363|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|Convert successful for type temperature: 15 CELSIUS = 59 FAHRENHEIT|
+2026-03-25 23:49:55.4363|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Quantity/Convert|
+2026-03-25 23:49:56.0438|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action History/GetAll|
+2026-03-25 23:49:56.0438|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll history records called|
+2026-03-25 23:49:56.0438|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking cache for key History:all|
+2026-03-25 23:49:56.0438|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Cache miss for key History:all. Fetching from database|
+2026-03-25 23:49:56.0438|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Cached 10 records for key History:all|
+2026-03-25 23:49:56.0438|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll returned 10 records|
+2026-03-25 23:49:56.0438|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action History/GetAll|
+2026-03-25 23:51:26.5060|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Auth/Login|
+2026-03-25 23:51:26.5060|INFO|QuantityMeasurementApp.APILayer.Controllers.AuthController|Login called for email pushpaksingha1234@gmail.com|
+2026-03-25 23:51:26.5681|WARN|QuantityMeasurementApp.APILayer.Controllers.AuthController|Login failed. User not found for email pushpaksingha1234@gmail.com|
+2026-03-25 23:51:26.5681|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Auth/Login|
+2026-03-25 23:52:10.1315|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Auth/Register|
+2026-03-25 23:52:10.1315|INFO|QuantityMeasurementApp.APILayer.Controllers.AuthController|Register called for email pushpaksinghal@gmail.com|
+2026-03-25 23:52:10.2128|INFO|QuantityMeasurementApp.APILayer.Controllers.AuthController|Registration successful for email pushpaksinghal@gmail.com|
+2026-03-25 23:52:10.2128|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Auth/Register|
+2026-03-25 23:53:32.2590|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Quantity/Divide|
+2026-03-25 23:53:32.2590|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|Divide called for type Temperature|
+2026-03-25 23:53:32.2590|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Divide operation started|
+2026-03-25 23:53:32.2590|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|History saved and cache invalidated for key History:all|
+2026-03-25 23:53:32.2590|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Divide completed: -0.047780211029265385|
+2026-03-25 23:53:32.2590|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|Divide successful for type Temperature: -0.047780211029265385|
+2026-03-25 23:53:32.2590|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Quantity/Divide|

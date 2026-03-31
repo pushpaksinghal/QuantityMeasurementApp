@@ -1,0 +1,284 @@
+2026-03-28 11:50:58.1516|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Auth/Login|
+2026-03-28 11:50:58.1885|INFO|QuantityMeasurementApp.APILayer.Controllers.AuthController|Login called for email pushpaksinghal1234@gmail.com|
+2026-03-28 11:51:02.4740|INFO|QuantityMeasurementApp.APILayer.Controllers.AuthController|Login successful for email pushpaksinghal1234@gmail.com|
+2026-03-28 11:51:02.4740|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Auth/Login|
+2026-03-28 11:53:41.5529|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action History/GetAll|
+2026-03-28 11:53:41.5613|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll history records called|
+2026-03-28 11:53:41.5613|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking cache for key History:all|
+2026-03-28 11:53:44.4435|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Cache miss for key History:all. Fetching from database|
+2026-03-28 11:53:44.6983|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Cached 11 records for key History:all|
+2026-03-28 11:53:44.6983|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll returned 11 records|
+2026-03-28 11:53:44.6983|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action History/GetAll|
+2026-03-28 11:53:46.7625|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action History/GetAll|
+2026-03-28 11:53:46.7625|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll history records called|
+2026-03-28 11:53:46.7625|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking cache for key History:all|
+2026-03-28 11:53:46.7884|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Cache hit for key History:all|
+2026-03-28 11:53:46.7884|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll returned 11 records|
+2026-03-28 11:53:46.7884|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action History/GetAll|
+2026-03-28 11:53:48.5877|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action History/GetAll|
+2026-03-28 11:53:48.5877|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll history records called|
+2026-03-28 11:53:48.5877|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking cache for key History:all|
+2026-03-28 11:53:48.5914|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Cache hit for key History:all|
+2026-03-28 11:53:48.5914|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll returned 11 records|
+2026-03-28 11:53:48.5914|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action History/GetAll|
+2026-03-28 11:53:51.3765|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action History/GetAll|
+2026-03-28 11:53:51.3765|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll history records called|
+2026-03-28 11:53:51.3765|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking cache for key History:all|
+2026-03-28 11:53:51.3765|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Cache hit for key History:all|
+2026-03-28 11:53:51.3765|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll returned 11 records|
+2026-03-28 11:53:51.3765|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action History/GetAll|
+2026-03-28 11:58:35.3912|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action History/GetAll|
+2026-03-28 11:58:35.3912|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll history records called|
+2026-03-28 11:58:35.3912|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking cache for key History:all|
+2026-03-28 11:58:35.3912|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Cache hit for key History:all|
+2026-03-28 11:58:35.3912|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll returned 11 records|
+2026-03-28 11:58:35.3912|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action History/GetAll|
+2026-03-28 14:26:36.4738|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Auth/Login|
+2026-03-28 14:26:36.4830|INFO|QuantityMeasurementApp.APILayer.Controllers.AuthController|Login called for email pushpaksinghal1234@gmail.com|
+2026-03-28 14:26:37.0287|INFO|QuantityMeasurementApp.APILayer.Controllers.AuthController|Login successful for email pushpaksinghal1234@gmail.com|
+2026-03-28 14:26:37.0287|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Auth/Login|
+2026-03-28 14:26:38.9703|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Quantity/EqualsCheck|
+2026-03-28 14:26:38.9703|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|EqualsCheck called for type length|
+2026-03-28 14:26:38.9703|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking equality|
+2026-03-28 14:27:12.7353|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Quantity/EqualsCheck|
+2026-03-28 14:27:12.7735|ERROR|QuantityMeasurementApp.APILayer.Filters.GlobalExceptionFilter|Unhandled exception occurred while executing request.|System.ArgumentException: Invalid unit '' for LengthUnit.
+   at QuantityMeasurementApp.BusinessLayer.Mappers.QuantityDtoMapper.ToEntity[T](QuantityDTO dto) in E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.BusinessLayer\Mappers\QuantityDtoMapper.cs:line 18
+   at QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService.CheckEquality[T](BinaryQuantityRequestDto request, QuantityEqualityComparer`1 equalityComparer) in E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.BusinessLayer\Services\QuantityApplicationService.cs:line 48
+   at QuantityMeasurementApp.APILayer.Controllers.QuantityController.EqualsCheck(String type, BinaryQuantityRequestDto request) in E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.APILayer\Controllers\QuantityController.cs:line 162
+   at lambda_method136(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2026-03-28 14:27:58.3183|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Quantity/EqualsCheck|
+2026-03-28 14:27:58.3183|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|EqualsCheck called for type length|
+2026-03-28 14:27:58.3183|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking equality|
+2026-03-28 14:31:25.5638|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Quantity/EqualsCheck|
+2026-03-28 14:31:25.5768|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|EqualsCheck called for type length|
+2026-03-28 14:31:25.5768|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking equality|
+2026-03-28 14:33:10.5049|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Quantity/EqualsCheck|
+2026-03-28 14:33:10.6705|ERROR|QuantityMeasurementApp.APILayer.Filters.GlobalExceptionFilter|Unhandled exception occurred while executing request.|System.ArgumentException: Invalid unit '' for LengthUnit.
+   at QuantityMeasurementApp.BusinessLayer.Mappers.QuantityDtoMapper.ToEntity[T](QuantityDTO dto) in E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.BusinessLayer\Mappers\QuantityDtoMapper.cs:line 18
+   at QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService.CheckEquality[T](BinaryQuantityRequestDto request, QuantityEqualityComparer`1 equalityComparer) in E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.BusinessLayer\Services\QuantityApplicationService.cs:line 48
+   at QuantityMeasurementApp.APILayer.Controllers.QuantityController.EqualsCheck(String type, BinaryQuantityRequestDto request) in E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.APILayer\Controllers\QuantityController.cs:line 162
+   at lambda_method9(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2026-03-28 14:33:49.7656|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Auth/Login|
+2026-03-28 14:33:49.7829|INFO|QuantityMeasurementApp.APILayer.Controllers.AuthController|Login called for email pushpaksinghal1234@gmail.com|
+2026-03-28 14:33:51.6816|INFO|QuantityMeasurementApp.APILayer.Controllers.AuthController|Login successful for email pushpaksinghal1234@gmail.com|
+2026-03-28 14:33:51.6816|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Auth/Login|
+2026-03-28 14:33:51.8439|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action History/GetAll|
+2026-03-28 14:33:51.8439|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll history records called|
+2026-03-28 14:33:51.8439|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking cache for key History:all|
+2026-03-28 14:33:54.1569|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Cache miss for key History:all. Fetching from database|
+2026-03-28 14:33:54.1981|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Cached 11 records for key History:all|
+2026-03-28 14:33:54.1981|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll returned 11 records|
+2026-03-28 14:33:54.1990|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action History/GetAll|
+2026-03-28 14:33:55.7460|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Quantity/EqualsCheck|
+2026-03-28 14:33:55.7460|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|EqualsCheck called for type length|
+2026-03-28 14:33:55.7460|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking equality|
+2026-03-28 14:33:55.7460|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Equality result: False|
+2026-03-28 14:33:55.7460|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|EqualsCheck result for type length: False|
+2026-03-28 14:33:55.7460|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Quantity/EqualsCheck|
+2026-03-28 14:33:56.3481|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action History/GetAll|
+2026-03-28 14:33:56.3481|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll history records called|
+2026-03-28 14:33:56.3481|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking cache for key History:all|
+2026-03-28 14:33:56.3577|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Cache hit for key History:all|
+2026-03-28 14:33:56.3577|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll returned 11 records|
+2026-03-28 14:33:56.3577|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action History/GetAll|
+2026-03-28 14:37:37.0820|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Quantity/EqualsCheck|
+2026-03-28 14:37:37.0930|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|EqualsCheck called for type length|
+2026-03-28 14:37:37.0930|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking equality|
+2026-03-28 14:41:31.4747|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Auth/Login|
+2026-03-28 14:41:31.4876|INFO|QuantityMeasurementApp.APILayer.Controllers.AuthController|Login called for email pushpaksinghal1234@gmail.com|
+2026-03-28 14:41:33.3375|INFO|QuantityMeasurementApp.APILayer.Controllers.AuthController|Login successful for email pushpaksinghal1234@gmail.com|
+2026-03-28 14:41:33.3375|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Auth/Login|
+2026-03-28 14:41:33.4687|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action History/GetAll|
+2026-03-28 14:41:33.4687|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll history records called|
+2026-03-28 14:41:33.4687|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking cache for key History:all|
+2026-03-28 14:41:35.7801|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Cache miss for key History:all. Fetching from database|
+2026-03-28 14:41:35.8286|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Cached 11 records for key History:all|
+2026-03-28 14:41:35.8286|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll returned 11 records|
+2026-03-28 14:41:35.8286|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action History/GetAll|
+2026-03-28 14:41:37.9877|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Quantity/EqualsCheck|
+2026-03-28 14:41:37.9877|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|EqualsCheck called for type length|
+2026-03-28 14:41:37.9877|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking equality|
+2026-03-28 14:41:37.9877|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Equality result: False|
+2026-03-28 14:41:37.9877|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|EqualsCheck result for type length: False|
+2026-03-28 14:41:37.9877|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Quantity/EqualsCheck|
+2026-03-28 14:41:38.5841|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action History/GetAll|
+2026-03-28 14:41:38.5841|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll history records called|
+2026-03-28 14:41:38.5841|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking cache for key History:all|
+2026-03-28 14:41:38.5941|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Cache hit for key History:all|
+2026-03-28 14:41:38.5941|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll returned 11 records|
+2026-03-28 14:41:38.5941|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action History/GetAll|
+2026-03-28 14:41:42.7142|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Quantity/Convert|
+2026-03-28 14:41:42.7142|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|Convert called for type length|
+2026-03-28 14:41:42.7142|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Convert operation started|
+2026-03-28 14:41:42.7552|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|History saved and cache invalidated for key History:all|
+2026-03-28 14:41:42.7552|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Conversion completed: 1 FEET -> 12 INCH|
+2026-03-28 14:41:42.7552|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|Convert successful for type length: 1 FEET = 12 INCH|
+2026-03-28 14:41:42.7552|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Quantity/Convert|
+2026-03-28 14:41:43.3119|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action History/GetAll|
+2026-03-28 14:41:43.3119|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll history records called|
+2026-03-28 14:41:43.3119|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking cache for key History:all|
+2026-03-28 14:41:43.3119|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Cache miss for key History:all. Fetching from database|
+2026-03-28 14:41:43.3119|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Cached 12 records for key History:all|
+2026-03-28 14:41:43.3119|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll returned 12 records|
+2026-03-28 14:41:43.3119|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action History/GetAll|
+2026-03-28 14:42:08.6897|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Quantity/EqualsCheck|
+2026-03-28 14:42:08.6897|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|EqualsCheck called for type length|
+2026-03-28 14:42:08.6897|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking equality|
+2026-03-28 14:42:08.6897|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Equality result: False|
+2026-03-28 14:42:08.6897|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|EqualsCheck result for type length: False|
+2026-03-28 14:42:08.6897|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Quantity/EqualsCheck|
+2026-03-28 14:45:26.8710|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Auth/Login|
+2026-03-28 14:45:26.8734|INFO|QuantityMeasurementApp.APILayer.Controllers.AuthController|Login called for email pushpaksinghal1234@gmail.com|
+2026-03-28 14:45:27.0255|INFO|QuantityMeasurementApp.APILayer.Controllers.AuthController|Login successful for email pushpaksinghal1234@gmail.com|
+2026-03-28 14:45:27.0255|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Auth/Login|
+2026-03-28 14:45:29.3738|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Quantity/EqualsCheck|
+2026-03-28 14:45:29.3738|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|EqualsCheck called for type length|
+2026-03-28 14:45:29.3738|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking equality|
+2026-03-28 14:46:35.4405|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Quantity/EqualsCheck|
+2026-03-28 14:46:35.4802|ERROR|QuantityMeasurementApp.APILayer.Filters.GlobalExceptionFilter|Unhandled exception occurred while executing request.|System.ArgumentException: Invalid unit '' for LengthUnit.
+   at QuantityMeasurementApp.BusinessLayer.Mappers.QuantityDtoMapper.ToEntity[T](QuantityDTO dto) in E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.BusinessLayer\Mappers\QuantityDtoMapper.cs:line 18
+   at QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService.CheckEquality[T](BinaryQuantityRequestDto request, QuantityEqualityComparer`1 equalityComparer) in E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.BusinessLayer\Services\QuantityApplicationService.cs:line 48
+   at QuantityMeasurementApp.APILayer.Controllers.QuantityController.EqualsCheck(String type, BinaryQuantityRequestDto request) in E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.APILayer\Controllers\QuantityController.cs:line 162
+   at lambda_method136(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2026-03-28 14:46:35.4802|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Quantity/EqualsCheck|
+2026-03-28 14:46:35.5167|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|EqualsCheck called for type length|
+2026-03-28 14:46:35.5167|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking equality|
+2026-03-28 14:46:37.6838|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Quantity/EqualsCheck|
+2026-03-28 14:46:37.6838|ERROR|QuantityMeasurementApp.APILayer.Filters.GlobalExceptionFilter|Unhandled exception occurred while executing request.|System.ArgumentException: Invalid unit '' for LengthUnit.
+   at QuantityMeasurementApp.BusinessLayer.Mappers.QuantityDtoMapper.ToEntity[T](QuantityDTO dto) in E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.BusinessLayer\Mappers\QuantityDtoMapper.cs:line 18
+   at QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService.CheckEquality[T](BinaryQuantityRequestDto request, QuantityEqualityComparer`1 equalityComparer) in E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.BusinessLayer\Services\QuantityApplicationService.cs:line 48
+   at QuantityMeasurementApp.APILayer.Controllers.QuantityController.EqualsCheck(String type, BinaryQuantityRequestDto request) in E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.APILayer\Controllers\QuantityController.cs:line 162
+   at lambda_method136(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2026-03-28 14:46:49.2047|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Quantity/EqualsCheck|
+2026-03-28 14:46:49.2047|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|EqualsCheck called for type length|
+2026-03-28 14:46:49.2047|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking equality|
+2026-03-28 14:47:12.7269|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Quantity/EqualsCheck|
+2026-03-28 14:47:12.7580|ERROR|QuantityMeasurementApp.APILayer.Filters.GlobalExceptionFilter|Unhandled exception occurred while executing request.|System.ArgumentException: Invalid unit '' for LengthUnit.
+   at QuantityMeasurementApp.BusinessLayer.Mappers.QuantityDtoMapper.ToEntity[T](QuantityDTO dto) in E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.BusinessLayer\Mappers\QuantityDtoMapper.cs:line 18
+   at QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService.CheckEquality[T](BinaryQuantityRequestDto request, QuantityEqualityComparer`1 equalityComparer) in E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.BusinessLayer\Services\QuantityApplicationService.cs:line 48
+   at QuantityMeasurementApp.APILayer.Controllers.QuantityController.EqualsCheck(String type, BinaryQuantityRequestDto request) in E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.APILayer\Controllers\QuantityController.cs:line 162
+   at lambda_method136(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2026-03-28 14:47:12.7580|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Quantity/EqualsCheck|
+2026-03-28 14:47:12.7580|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|EqualsCheck called for type length|
+2026-03-28 14:47:12.7580|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking equality|
+2026-03-28 14:47:12.7580|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Equality result: False|
+2026-03-28 14:47:12.7580|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|EqualsCheck result for type length: False|
+2026-03-28 14:47:12.7580|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Quantity/EqualsCheck|
+2026-03-28 14:47:18.7162|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Quantity/EqualsCheck|
+2026-03-28 14:47:18.7162|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|EqualsCheck called for type length|
+2026-03-28 14:47:18.7162|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking equality|
+2026-03-28 14:47:18.7162|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Equality result: False|
+2026-03-28 14:47:18.7162|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|EqualsCheck result for type length: False|
+2026-03-28 14:47:18.7162|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Quantity/EqualsCheck|
+2026-03-28 14:49:10.5899|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Quantity/EqualsCheck|
+2026-03-28 14:49:10.5899|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|EqualsCheck called for type length|
+2026-03-28 14:49:10.5899|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking equality|
+2026-03-28 14:49:10.5899|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Equality result: True|
+2026-03-28 14:49:10.5899|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|EqualsCheck result for type length: True|
+2026-03-28 14:49:10.5899|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Quantity/EqualsCheck|
+2026-03-28 14:52:10.3212|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Auth/Login|
+2026-03-28 14:52:10.3212|INFO|QuantityMeasurementApp.APILayer.Controllers.AuthController|Login called for email pushpaksinghal1234@gmail.com|
+2026-03-28 14:52:10.6148|INFO|QuantityMeasurementApp.APILayer.Controllers.AuthController|Login successful for email pushpaksinghal1234@gmail.com|
+2026-03-28 14:52:10.6148|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Auth/Login|
+2026-03-28 14:52:13.2026|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Quantity/EqualsCheck|
+2026-03-28 14:52:13.2026|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|EqualsCheck called for type length|
+2026-03-28 14:52:13.2026|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking equality|
+2026-03-28 14:52:13.2026|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Equality result: False|
+2026-03-28 14:52:13.2026|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|EqualsCheck result for type length: False|
+2026-03-28 14:52:13.2026|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Quantity/EqualsCheck|
+2026-03-28 14:52:43.1473|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Quantity/EqualsCheck|
+2026-03-28 14:52:43.1473|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|EqualsCheck called for type length|
+2026-03-28 14:52:43.1473|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking equality|
+2026-03-28 14:52:43.1473|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Equality result: False|
+2026-03-28 14:52:43.1473|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|EqualsCheck result for type length: False|
+2026-03-28 14:52:43.1473|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Quantity/EqualsCheck|
+2026-03-28 14:52:51.5081|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Quantity/SameAdd|
+2026-03-28 14:52:51.5081|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|SameAdd called for type temperature|
+2026-03-28 14:52:51.5081|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Add operation started|
+2026-03-28 14:52:51.5370|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Quantity/SameAdd|
+2026-03-28 14:52:51.5370|ERROR|QuantityMeasurementApp.APILayer.Filters.GlobalExceptionFilter|Unhandled exception occurred while executing request.|System.InvalidOperationException: Arithmetic operations are not allowed for temperature.
+   at QuantityMeasurementApp.BusinessLayer.Services.QuantityValidationService.ValidateArithmeticOperation[T](Quantity`1 first, Quantity`1 second) in E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.BusinessLayer\Services\QuantityValidationService.cs:line 46
+   at QuantityMeasurementApp.BusinessLayer.Services.QuantityArithmeticService.AddUnit[T](Quantity`1 q1, Quantity`1 q2) in E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.BusinessLayer\Services\QuantityArithmeticService.cs:line 59
+   at QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService.AddUnits[T](BinaryQuantityRequestDto request) in E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.BusinessLayer\Services\QuantityApplicationService.cs:line 103
+   at QuantityMeasurementApp.APILayer.Controllers.QuantityController.SameAdd(String type, BinaryQuantityRequestDto request) in E:\cshrpProject\QuantityMeasurementApp.App\QuantityMeasurementApp.APILayer\Controllers\QuantityController.cs:line 64
+   at lambda_method140(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2026-03-28 14:52:57.7743|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Quantity/SameAdd|
+2026-03-28 14:52:57.7743|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|SameAdd called for type volume|
+2026-03-28 14:52:57.7743|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Add operation started|
+2026-03-28 14:52:57.8011|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|History saved and cache invalidated for key History:all|
+2026-03-28 14:52:57.8011|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Addition completed: 1.001 LITRE|
+2026-03-28 14:52:57.8011|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|SameAdd successful for type volume: 1 LITRE + 1 MILLILITRE = 1.001 LITRE|
+2026-03-28 14:52:57.8011|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Quantity/SameAdd|
+2026-03-28 14:53:39.7340|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Quantity/EqualsCheck|
+2026-03-28 14:53:39.7340|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|EqualsCheck called for type length|
+2026-03-28 14:53:39.7340|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking equality|
+2026-03-28 14:53:39.7340|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Equality result: False|
+2026-03-28 14:53:39.7340|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|EqualsCheck result for type length: False|
+2026-03-28 14:53:39.7340|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Quantity/EqualsCheck|
+2026-03-28 14:53:44.0675|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Quantity/SameAdd|
+2026-03-28 14:53:44.0675|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|SameAdd called for type volume|
+2026-03-28 14:53:44.0675|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Add operation started|
+2026-03-28 14:53:44.0675|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|History saved and cache invalidated for key History:all|
+2026-03-28 14:53:44.0675|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Addition completed: 1.001 LITRE|
+2026-03-28 14:53:44.0675|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|SameAdd successful for type volume: 1 LITRE + 1 MILLILITRE = 1.001 LITRE|
+2026-03-28 14:53:44.0675|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Quantity/SameAdd|

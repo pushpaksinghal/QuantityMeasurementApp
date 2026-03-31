@@ -1,0 +1,36 @@
+2026-03-30 00:26:38.8938|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Auth/GoogleLogin|
+2026-03-30 00:26:38.9359|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Auth/GoogleLogin|
+2026-03-30 00:26:44.0123|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Auth/GoogleResponse|
+2026-03-30 00:26:46.7937|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Auth/GoogleResponse|
+2026-03-30 00:42:01.1776|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Auth/Login|
+2026-03-30 00:42:01.2259|INFO|QuantityMeasurementApp.APILayer.Controllers.AuthController|Login called for email pushpaksinghal1234@gmail.com|
+2026-03-30 00:42:03.4248|INFO|QuantityMeasurementApp.APILayer.Controllers.AuthController|Login successful for email pushpaksinghal1234@gmail.com|
+2026-03-30 00:42:03.4248|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Auth/Login|
+2026-03-30 00:42:20.6078|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action History/GetAll|
+2026-03-30 00:42:20.6078|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll history records called|
+2026-03-30 00:42:20.6078|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking cache for key History:all|
+2026-03-30 00:42:23.4191|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Cache miss for key History:all. Fetching from database|
+2026-03-30 00:42:23.4648|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Cached 14 records for key History:all|
+2026-03-30 00:42:23.4648|INFO|QuantityMeasurementApp.APILayer.Controllers.HistoryController|GetAll returned 14 records|
+2026-03-30 00:42:23.4648|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action History/GetAll|
+2026-03-30 00:52:32.2914|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Auth/GoogleLogin|
+2026-03-30 00:52:32.3287|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Auth/GoogleLogin|
+2026-03-30 00:52:38.2450|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Auth/GoogleResponse|
+2026-03-30 00:52:40.2820|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Auth/GoogleResponse|
+2026-03-30 00:55:52.5322|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Auth/Login|
+2026-03-30 00:55:52.5455|INFO|QuantityMeasurementApp.APILayer.Controllers.AuthController|Login called for email pushpaksinghal1234@gmail.com|
+2026-03-30 00:55:54.2221|INFO|QuantityMeasurementApp.APILayer.Controllers.AuthController|Login successful for email pushpaksinghal1234@gmail.com|
+2026-03-30 00:55:54.2221|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Auth/Login|
+2026-03-30 00:56:02.7774|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Quantity/EqualsCheck|
+2026-03-30 00:56:02.7774|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|EqualsCheck called for type length|
+2026-03-30 00:56:02.7774|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Checking equality|
+2026-03-30 00:56:02.7774|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Equality result: False|
+2026-03-30 00:56:02.7774|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|EqualsCheck result for type length: False|
+2026-03-30 00:56:02.7774|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Quantity/EqualsCheck|
+2026-03-30 00:56:12.9076|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Starting action Quantity/Convert|
+2026-03-30 00:56:12.9076|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|Convert called for type length|
+2026-03-30 00:56:12.9076|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Convert operation started|
+2026-03-30 00:56:15.2709|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|History saved and cache invalidated for key History:all|
+2026-03-30 00:56:15.2709|INFO|QuantityMeasurementApp.BusinessLayer.Services.QuantityApplicationService|Conversion completed: 1 CENTIMETERS -> 0.032808416666666666 FEET|
+2026-03-30 00:56:15.2709|INFO|QuantityMeasurementApp.APILayer.Controllers.QuantityController|Convert successful for type length: 1 CENTIMETERS = 0.032808416666666666 FEET|
+2026-03-30 00:56:15.2709|INFO|QuantityMeasurementApp.APILayer.Filters.ActionLoggingFilter|Completed action Quantity/Convert|
