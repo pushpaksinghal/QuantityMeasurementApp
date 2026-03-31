@@ -73,7 +73,7 @@ try
     var connectionStringBuilder = new Npgsql.NpgsqlConnectionStringBuilder(connectionString);
     logger.Info($"Database connection configured for host: {connectionStringBuilder.Host}, database: {connectionStringBuilder.Database}");
 
-    // FIX 1: Redis is optional — don't throw if it's empty
+    // Redis configuration
     string? redisConnection = builder.Configuration.GetConnectionString("Redis");
 
     string jwtKey = builder.Configuration["Jwt:Key"]
@@ -134,20 +134,26 @@ try
 
     builder.Services.AddAuthorization();
 
-    // FIX 1: Only register Redis if a connection string is actually provided
+    // ✅ FIXED: Configure caching with fallback
     if (!string.IsNullOrEmpty(redisConnection))
     {
+        // Use Redis cache
         builder.Services.AddStackExchangeRedisCache(options =>
         {
             options.Configuration = redisConnection;
             options.InstanceName = "QuantityApp:";
         });
-        logger.Info("Redis cache configured");
+        logger.Info("✅ Redis cache configured with Upstash");
     }
     else
     {
-        logger.Warn("Redis connection string not found - caching will be disabled");
+        // Fallback to in-memory cache when Redis is not available
+        builder.Services.AddDistributedMemoryCache();
+        logger.Warn("⚠️ Redis not configured - using in-memory cache fallback");
     }
+
+    // ✅ Register RedisCacheService - it will work with either Redis or in-memory cache
+    builder.Services.AddScoped<RedisCacheService>();
 
     builder.Services.AddSingleton(new DbConnectionFactory(connectionString));
     builder.Services.AddSingleton<UnitAdapterFactory>();
@@ -157,12 +163,10 @@ try
     builder.Services.AddScoped<IQuantityArithmeticService, QuantityArithmeticService>();
     builder.Services.AddScoped<IQuantityHistoryRepository, QuantityHistoryRepository>();
     builder.Services.AddScoped<IQuantityApplicationService, QuantityApplicationService>();
-    builder.Services.AddScoped<RedisCacheService>();
     builder.Services.AddScoped<JwtTokenService>();
 
     builder.Services.AddCors(options =>
     {
-        // FIX 2: Removed .AllowCredentials() — it cannot be combined with AllowAnyOrigin()
         options.AddPolicy("AllowAngular", policy =>
         {
             policy.AllowAnyOrigin()
@@ -235,6 +239,28 @@ try
             results["error"] = ex.Message;
             results["overall"] = "Unhealthy";
             return Results.Problem(detail: ex.Message, statusCode: 500);
+        }
+    });
+
+    // ✅ Add Redis health check endpoint
+    app.MapGet("/health/redis", async (RedisCacheService redisCache) =>
+    {
+        try
+        {
+            await redisCache.SetAsync("health_check", "OK", TimeSpan.FromMinutes(1));
+            var result = await redisCache.GetAsync<string>("health_check");
+            
+            return Results.Ok(new 
+            { 
+                status = result == "OK" ? "Connected" : "Failed",
+                cacheType = redisConnection != null ? "Redis (Upstash)" : "In-Memory (Fallback)",
+                configured = redisConnection != null,
+                testResult = result
+            });
+        }
+        catch (Exception ex)
+        {
+            return Results.Problem($"Redis health check failed: {ex.Message}");
         }
     });
 
@@ -337,6 +363,7 @@ try
     
     logger.Info($"Application starting on port {port}");
     logger.Info($"Health check available at /health and /health/database");
+    logger.Info($"Redis health check available at /health/redis");
 
     app.Run();
 }
