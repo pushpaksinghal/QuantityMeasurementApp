@@ -23,17 +23,18 @@ namespace QuantityMeasurementApp.RepositoryLayer.Utility
             connection.Open();
 
             string query = @"
-                INSERT INTO QuantityHistory
+                INSERT INTO ""QuantityHistory""
                 (
-                    Category,
-                    OperationType,
-                    FirstValue,
-                    FirstUnit,
-                    SecondValue,
-                    SecondUnit,
-                    TargetUnit,
-                    ResultValue,
-                    ResultUnit
+                    ""Category"",
+                    ""OperationType"",
+                    ""FirstValue"",
+                    ""FirstUnit"",
+                    ""SecondValue"",
+                    ""SecondUnit"",
+                    ""TargetUnit"",
+                    ""ResultValue"",
+                    ""ResultUnit"",
+                    ""CreatedAt""
                 )
                 VALUES
                 (
@@ -45,7 +46,8 @@ namespace QuantityMeasurementApp.RepositoryLayer.Utility
                     @SecondUnit,
                     @TargetUnit,
                     @ResultValue,
-                    @ResultUnit
+                    @ResultUnit,
+                    @CreatedAt
                 )";
 
             using NpgsqlCommand command = new NpgsqlCommand(query, connection);
@@ -58,6 +60,7 @@ namespace QuantityMeasurementApp.RepositoryLayer.Utility
             command.Parameters.AddWithValue("@TargetUnit", (object?)record.TargetUnit ?? DBNull.Value);
             command.Parameters.AddWithValue("@ResultValue", record.ResultValue);
             command.Parameters.AddWithValue("@ResultUnit", record.ResultUnit);
+            command.Parameters.AddWithValue("@CreatedAt", DateTime.UtcNow);
 
             command.ExecuteNonQuery();
         }
@@ -69,7 +72,7 @@ namespace QuantityMeasurementApp.RepositoryLayer.Utility
             using NpgsqlConnection connection = _connectionFactory.CreateConnection();
             connection.Open();
 
-            string query = "SELECT * FROM QuantityHistory ORDER BY Id DESC";
+            string query = @"SELECT * FROM ""QuantityHistory"" ORDER BY ""Id"" DESC";
 
             using NpgsqlCommand command = new NpgsqlCommand(query, connection);
             using NpgsqlDataReader reader = command.ExecuteReader();
@@ -100,7 +103,7 @@ namespace QuantityMeasurementApp.RepositoryLayer.Utility
             using NpgsqlConnection connection = _connectionFactory.CreateConnection();
             connection.Open();
 
-            string query = "SELECT * FROM QuantityHistory WHERE Id = @Id";
+            string query = @"SELECT * FROM ""QuantityHistory"" WHERE ""Id"" = @Id";
 
             using NpgsqlCommand command = new NpgsqlCommand(query, connection);
             command.Parameters.AddWithValue("@Id", id);
@@ -133,7 +136,7 @@ namespace QuantityMeasurementApp.RepositoryLayer.Utility
             using NpgsqlConnection connection = _connectionFactory.CreateConnection();
             connection.Open();
 
-            string query = "DELETE FROM QuantityHistory WHERE Id = @Id";
+            string query = @"DELETE FROM ""QuantityHistory"" WHERE ""Id"" = @Id";
 
             using NpgsqlCommand command = new NpgsqlCommand(query, connection);
             command.Parameters.AddWithValue("@Id", id);
