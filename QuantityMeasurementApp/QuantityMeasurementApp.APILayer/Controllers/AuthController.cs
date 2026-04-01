@@ -17,17 +17,20 @@ namespace QuantityMeasurementApp.APILayer.Controllers
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly JwtTokenService _jwtTokenService;
         private readonly ILogger<AuthController> _logger;
+        private readonly IConfiguration _configuration;
 
         public AuthController(
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
             JwtTokenService jwtTokenService,
-            ILogger<AuthController> logger)
+            ILogger<AuthController> logger,
+            IConfiguration configuration)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _jwtTokenService = jwtTokenService;
             _logger = logger;
+            _configuration = configuration;
         }
 
         [HttpPost("register")]
@@ -117,17 +120,19 @@ namespace QuantityMeasurementApp.APILayer.Controllers
         [HttpGet("google-response")]
         public async Task<IActionResult> GoogleResponse()
         {
+            var frontendUrl = _configuration["Frontend:Url"] ?? "http://localhost:4200";
+
             var authenticateResult = await HttpContext.AuthenticateAsync(IdentityConstants.ExternalScheme);
 
             if (!authenticateResult.Succeeded)
             {
-                return Redirect("http://127.0.0.1:5500/index.html?error=google_auth_failed");
+                return Redirect($"{frontendUrl}/?error=google_auth_failed");
             }
 
             var email = authenticateResult.Principal?.FindFirstValue(ClaimTypes.Email);
             if (string.IsNullOrWhiteSpace(email))
             {
-                return Redirect("http://127.0.0.1:5500/index.html?error=email_not_received");
+                return Redirect($"{frontendUrl}/?error=email_not_received");
             }
 
             var user = await _userManager.FindByEmailAsync(email);
@@ -144,17 +149,17 @@ namespace QuantityMeasurementApp.APILayer.Controllers
                 var createResult = await _userManager.CreateAsync(user);
                 if (!createResult.Succeeded)
                 {
-                    return Redirect("http://127.0.0.1:5500/index.html?error=user_creation_failed");
+                    return Redirect($"{frontendUrl}/?error=user_creation_failed");
                 }
             }
 
             var tokenResult = await _jwtTokenService.CreateTokenAsync(user);
 
-            var frontendRedirect =
-                $"http://127.0.0.1:5500/google-callback.html?token={Uri.EscapeDataString(tokenResult.Token)}" +
-                $"&email={Uri.EscapeDataString(user.Email ?? string.Empty)}";
-
-            return Redirect(frontendRedirect);
+            return Redirect(
+                $"{frontendUrl}/google-callback" +
+                $"?token={Uri.EscapeDataString(tokenResult.Token)}" +
+                $"&email={Uri.EscapeDataString(user.Email ?? string.Empty)}"
+            );
         }
     }
 }

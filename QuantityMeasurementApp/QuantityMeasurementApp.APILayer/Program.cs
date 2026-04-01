@@ -33,7 +33,9 @@ try
     {
         options.Filters.Add<GlobalExceptionFilter>();
         options.Filters.Add<ActionLoggingFilter>();
-    });
+    })
+    .AddJsonOptions(opts =>
+    opts.JsonSerializerOptions.PropertyNamingPolicy = System.Text.Json.JsonNamingPolicy.CamelCase);
 
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen(options =>
