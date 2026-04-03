@@ -1,0 +1,4 @@
+D:\QuantityMeasurement.Microservices\microservices\shared\Contracts\obj\Debug\net8.0\Shared.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\QuantityMeasurement.Microservices\microservices\shared\Contracts\obj\Debug\net8.0\Shared.Contracts.AssemblyInfoInputs.cache
+D:\QuantityMeasurement.Microservices\microservices\shared\Contracts\obj\Debug\net8.0\Shared.Contracts.AssemblyInfo.cs
+D:\QuantityMeasurement.Microservices\microservices\shared\Contracts\obj\Debug\net8.0\Shared.Contracts.csproj.CoreCompileInputs.cache
